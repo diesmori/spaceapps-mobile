@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View, Button } from "react-native";
 import { StackNavigator } from "react-navigation";
-
 //import { principal } from "../styles/principal";
 //import { colors } from "../styles/colors";
-
-//import * as firebase from "firebase";
+import Draggable from 'react-native-draggable';
+import * as firebase from "firebase";
 
 export default class Planetas extends React.Component {
   constructor(props) {
@@ -19,7 +18,7 @@ export default class Planetas extends React.Component {
 
 
   componentDidMount() {
-    this.props.navigation.navigate("Lanzamiento");
+
   }
 
   render() {
