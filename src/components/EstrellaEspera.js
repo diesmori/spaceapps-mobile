@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, Button } from "react-native";
+import { Platform, StyleSheet, Text, View, Button,Image } from "react-native";
 import { StackNavigator } from "react-navigation";
 
 //import { principal } from "../styles/principal";
@@ -38,7 +38,8 @@ export default class EstrellaEspera extends React.Component {
 
       return (
         <View>
-          <Text>Estoesespera</Text>
+          <Text>**INFORMACION SOBRE EL PLANETA Y ESTRELLA**</Text>
+            <Image  source={require('./espacio.jpg')}/>
         </View>
 
       );
