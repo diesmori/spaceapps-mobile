@@ -29,6 +29,12 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Login from "./src/components/Login";
 import Instrucciones from "./src/components/Instrucciones";
+import Estrella from "./src/components/Estrella";
+import EstrellaEspera from "./src/components/EstrellaEspera";
+import PlanetaEspera from "./src/components/PlanetaEspera";
+import Final from "./src/components/Final";
+import Lanzamiento from "./src/components/Lanzamiento";
+import Planetas from "./src/components/Planetas";
 
 import * as firebase from "firebase";
 
@@ -39,7 +45,14 @@ firebase.initializeApp(config);
 const AppNavigator = createStackNavigator(
   {
     Login: { screen: Login },
-    Instrucciones: { screen: Instrucciones }
+    Instrucciones: { screen: Instrucciones},
+    Estrella: { screen: Estrella},
+    EstrellaEspera: {screen: EstrellaEspera},
+    Final: {screen: Final},
+    Lanzamiento: {screen: Lanzamiento},
+    Planetas: {screen: Planetas},
+    PlanetaEspera: {screen: PlanetaEspera},
+
   },
   { headerMode: "none" }
 );

@@ -12,11 +12,22 @@ export default class Login extends React.Component {
     super(props);
 
     this.state = {
-
+      boardId: "testing",
+      canBeFirst: true
     };
 
     this.joinToBoard = this.joinToBoard.bind(this);
+    this.listenToPlayers = this.listenToPlayers.bind(this);
 
+  }
+listenToPlayers(){
+    var that = this;
+    firebase.database().ref('Tableros/' + this.state.boardId).on("value", function(snapshot) {
+      if(snapshot.val().hasPlayers) {
+        that.setState({canBeFirst:false});
+      };
+    }, function (errorObject) {
+    });
   }
 
   joinToBoard(boardCode){
@@ -24,11 +35,16 @@ export default class Login extends React.Component {
     firebase.database().ref('Tableros/' + boardCode).update({
         hasPlayers: true
       });
+    if (this.state.canBeFirst) {
+      global.first = true;
+    }
     this.props.navigation.navigate("Instrucciones");
   }
 
 
   componentDidMount() {
+    global.first = false;
+    this.listenToPlayers();
 
   }
 

@@ -5,9 +5,9 @@ import { StackNavigator } from "react-navigation";
 //import { principal } from "../styles/principal";
 //import { colors } from "../styles/colors";
 
-//import * as firebase from "firebase";
+import * as firebase from "firebase";
 
-export default class Planetas extends React.Component {
+export default class PlanetaEspera extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,14 +19,14 @@ export default class Planetas extends React.Component {
 
 
   componentDidMount() {
-    this.props.navigation.navigate("Lanzamiento");
+
   }
 
   render() {
 
       return (
         <View>
-          <Text>Planetas tinder</Text>
+          <Text>Estoesespera de pp</Text>
         </View>
 
       );
