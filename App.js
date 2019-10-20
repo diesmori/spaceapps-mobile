@@ -28,12 +28,18 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from 'react-navigation-stack';
 
 import Login from "./src/components/Login";
+import Instrucciones from "./src/components/Instrucciones";
 
-//import * as firebase from "firebase";
+import * as firebase from "firebase";
+
+import { config } from "./src/components/Firebase/firebase";
+
+firebase.initializeApp(config);
 
 const AppNavigator = createStackNavigator(
   {
-    Login: { screen: Login }
+    Login: { screen: Login },
+    Instrucciones: { screen: Instrucciones }
   },
   { headerMode: "none" }
 );

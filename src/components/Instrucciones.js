@@ -26,7 +26,7 @@ export default class Instrucciones extends React.Component {
 
       return (
         <View>
-          <Text>Login</Text>
+          <Text>Instrucciones</Text>
         </View>
 
       );
